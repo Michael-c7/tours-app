@@ -1,4 +1,4 @@
-const Tours = [
+const listOfTours = [
     {
         id:1,
         img:"https://dl.airtable.com/.attachments/a0cd0702c443f31526267f38ea5314a1/2447eb7a/paris.jpg",
@@ -28,7 +28,7 @@ const Tours = [
         description:"Our Rome tour serves up Europe's most intoxicating brew of dazzling art, earth-shaking history, and city life with style. On this Rome vacation, your tour guide will resurrect the grandeur of ancient Rome's Colosseum, Forum, Pantheon, and nearby Ostia Antica. From the Renaissance and Baroque eras, you'll marvel at St. Peter's Basilica, the Vatican Museums, Sistine Chapel, and Borghese Gallery. You'll also enjoy today's Rome, with neighborhood walking tours, memorable restaurants, and time to explore on your own. Join us for the Best of Rome in 7 Days!"
     },
     {
-        id:4,
+        id:5,
         img:"https://dl.airtable.com/.attachments/3feee7a93af0f4f809312132090c9a80/58e3e8ec/poland.jpeg",
         title:"Best Of Poland In 10 Days Tour",
         price:"2,595",
@@ -37,4 +37,4 @@ const Tours = [
 
 ]
 
-export default Tours;
+export default listOfTours;

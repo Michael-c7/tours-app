@@ -46,7 +46,7 @@ code {
 }
 
 /*card*/
-.tours--card {
+.tour__card {
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -62,7 +62,7 @@ code {
   
 }
 
-.tours__img {
+.tour__img {
   width:100%;
   height:350px;
   border-top-left-radius: 5px;
@@ -73,21 +73,21 @@ code {
 
 
 /*card header*/
-.tours__header {
+.tour__header {
   display:flex;
   justify-content: space-between;
   align-items:center;
   width:90%;
   margin:30px auto;
-  font-size:12px;
+  font-size:11px;
   letter-spacing:2px;
 }
 
-.tours__title {
+.tour__title {
   font-weight:500;
 }
 
-.tours__price {
+.tour__price {
   font-size:16px;
   background-color:var(--blue-light);
   color:var(--blue);
@@ -95,7 +95,7 @@ code {
 }
 
 /*description*/
-.tours__description {
+.tour__description {
   color:#778797;
   line-height:1.5;
   width:90%;
@@ -126,4 +126,47 @@ code {
   letter-spacing: 2px;
   font-weight:lighter;
   align-self:center;
+}
+
+.refresh-btn {
+  position: relative;
+  left:50%;
+  transform: translate(-50%);
+  color:#fff;
+  border:none;
+  background-color:var(--blue);
+  border-radius:5px;
+  font-size:16px;
+  padding:10px;
+  margin:1.25rem 0;
+  letter-spacing: 3px;
+  font-weight:bold;
+  align-self:center;
+}
+
+
+
+/*loading*/
+.loading--container {
+  position: relative;
+}
+
+.loading__header {
+  font-size:38px;
+  letter-spacing: 2px;
+  text-align: center;
+  transform-origin: center;
+  animation:spin 3s ease 0.25s infinite alternate;
+  margin-top:5rem;
+  filter:drop-shadow(2px 2px 2px #333);
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg) scale(0.15);
+  }
+
+  to {
+    transform:rotate(360deg) scale(1);
+  }
 }
