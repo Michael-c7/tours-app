@@ -6,10 +6,10 @@ const Tour = (props) => {
     const [myTour, setMyTour] = useState(listOfTours);
   
     const removeItem = (event) => {
-      let card = event.target.parentElement;
-      console.log()
-      setMyTour(card.remove())
+      let card = event.target.parentElement.parentElement;
+      setMyTour(card.remove());
     }
+ 
     return (
           <div className="tour--container">
             <div className="tour__card">

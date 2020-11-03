@@ -5,11 +5,21 @@ import Tour from './Tour';
 // css
 import './index.css';
 import listOfTours from './listOfTours';
+import { render } from '@testing-library/react';
 
 const TourList = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [tourHeading, seTourHeading] = useState(false);
+
   const url = "https://api.github.com/users/QuincyLarson";
+
+  // function changeTourHeading() {
+  // }
+  let tourCard = Array.from(document.querySelectorAll(".tour--container"));
+  console.log(tourCard)
+  
+
 
   /* Getting json data so this program
   will have some reason to load,
@@ -40,11 +50,17 @@ const TourList = () => {
       </div>
     )
   }
-
+  
   /*The page when its loaded */
   return(
     <div className="container">
-      <h1 className="page--title">Our Tour</h1>
+      {tourHeading ? 
+      <div>
+        <h1 className="page--title">No tours left ¯\_(ツ)_/¯</h1>
+        <button className="refresh-btn">Refresh</button>
+      </div> :
+      <h1 className="page--title">Our Tour</h1>}
+      
       {listOfTours.map((tour) => {
         const {id, img, title, price, description} = tour;
         return (<Tour key={id} tour={tour}/>)
